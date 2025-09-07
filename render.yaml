@@ -1,0 +1,14 @@
+services:
+  - type: web
+    name: creditsea-backend
+    env: node
+    buildCommand: npm install
+    startCommand: node server.js
+    plan: free
+    envVars:
+      - key: MONGODB_URI
+        value: mongodb+srv://groot:<db_password>@knightrider.x1gvgcg.mongodb.net/?retryWrites=true&w=majority&appName=Knightrider
+      - key: JWT_SECRET
+        value: 123456789abcdef
+      - key: PORT
+        value: process.env.PORT
