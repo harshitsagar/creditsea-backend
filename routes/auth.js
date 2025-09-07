@@ -1,7 +1,6 @@
 const express = require('express');
 const jwt = require('jsonwebtoken');
 const User = require('../models/User');
-const twilio = require('twilio');  // ← Add this line
 const router = express.Router();
 
 // Store OTPs in memory for testing (instead of console)
